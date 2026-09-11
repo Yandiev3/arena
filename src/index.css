@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-podium {
+  font-family: 'FSP DEMO - PODIUM Sharp 4.11', sans-serif;
+}
+
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-1 {
+    animation: fade-up 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation: fade-up 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-3 {
+    animation: fade-up 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-4 {
+    animation: fade-up 0.8s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay {
+    animation: fade-in 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  color-scheme: dark;
+}
+
+.hero-video {
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 10vw, 7rem);
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: clamp(2.6rem, 8.2vmin, 6rem);
+  }
+}
+
+@media (max-width: 769px) {
+  .hero-video {
+    object-position: 50% 58%;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-video {
+    object-position: 48% 62%;
+  }
+}
