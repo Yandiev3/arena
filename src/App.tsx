@@ -21,7 +21,7 @@ import {
   type TournamentIcon,
 } from './data'
 
-const VIDEO_SRC = '../public/halls/arena.mp4'
+const VIDEO_SRC = `${import.meta.env.BASE_URL}halls/arena.mp4`
 
 const NAV_LINKS = [
   { href: '#halls', label: 'Залы' },
